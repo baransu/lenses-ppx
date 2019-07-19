@@ -7,8 +7,8 @@ steps:
   - script: "npm install -g esy@0.5.6"
     displayName: "npm install -g esy@0.5.6"
 
-  - script: yarn install
-    displayName: "yarn install"
-
   - script: esy @ppx
     displayName: "esy @ppx"
+
+  - script: npm install
+    displayName: "npm install"
