@@ -1,0 +1,33 @@
+name: lenses-ppx-ci
+
+trigger:
+  - master
+
+jobs:
+  - template: release/pipeline.yml
+    parameters:
+      name: "lenses_ppx_macOS"
+      vmImage: "macOS-10.13"
+      platform: "macOS"
+
+  - template: release/pipeline.yml
+    parameters:
+      name: "lenses_ppx_Linux"
+      vmImage: "ubuntu-16.04"
+      platform: "Linux"
+
+  - template: release/pipeline.yml
+    parameters:
+      name: "lenses_ppx_Windows"
+      vmImage: "vs2017-win2016"
+      platform: "Windows"
+
+  - job: lenses_ppx_bundle
+    pool:
+      vmImage: ubuntu-16.04
+    dependsOn:
+      - lenses_ppx_Linux
+      - lenses_ppx_macOS
+      - lenses_ppx_Windows
+    steps:
+      - template: release/bundle.yml

@@ -1,0 +1,6 @@
+steps:
+  - script: yarn run build
+    displayName: "yarn run build"
+
+  - script: esy @ppx build
+    displayName: "esy @ppx build"
