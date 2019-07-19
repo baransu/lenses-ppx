@@ -1,17 +1,21 @@
+# lenses-ppx
 
+> PPX to generate GADT lenses for ReasonML
 
-# Build
+## Build
+
 ```
 npm run build
 ```
 
-# Watch
+## Watch
 
 ```
 npm run watch
 ```
 
 In
+
 ```reason
 module State = [%lenses
  type state = {
@@ -46,7 +50,9 @@ module StateLenses = {
       };
 };
 ```
+
 Using
+
 ```reason
 open StateLenses;
 
@@ -54,4 +60,20 @@ let state = {email: "fakenickels@brazil.gov.br", age: 0};
 
 Js.log(state->get(Email));
 Js.log(state->get(Age));
+```
+
+## Developing
+
+Installing dependencies
+
+```
+esy @ppx
+npm install
+```
+
+Testing
+
+```
+npm build
+npm test
 ```

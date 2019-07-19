@@ -1,0 +1,19 @@
+lib: [
+  "_build/install/default/lib/lenses-ppx/META"
+  "_build/install/default/lib/lenses-ppx/dune-package"
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.a" {"lib/LensesPpx.a"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cma" {"lib/LensesPpx.cma"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cmi" {"lib/LensesPpx.cmi"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cmt" {"lib/LensesPpx.cmt"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cmx" {"lib/LensesPpx.cmx"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cmxa" {"lib/LensesPpx.cmxa"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.cmxs" {"lib/LensesPpx.cmxs"}
+  "_build/install/default/lib/lenses-ppx/lib/LensesPpx.re" {"lib/LensesPpx.re"}
+  "_build/install/default/lib/lenses-ppx/opam"
+]
+libexec: [
+  "_build/install/default/lib/lenses-ppx/lib/ppx.exe" {"lib/ppx.exe"}
+]
+doc: [
+  "_build/install/default/doc/lenses-ppx/README.md"
+]

@@ -2,27 +2,15 @@
   "name": "lenses-ppx",
   "sources": [
     {
-      "dir": "src",
-      "type": "ppx",
-      "ppx": ["LensesPpx"]
-    },
-    {
-      "dir": "test",
-      "type": "dev",
-      "backend": "js"
+      "dir": "__tests__",
+      "type": "dev"
     }
   ],
-  "entries": [
-    {
-      "backend": "native",
-      "type": "ppx",
-      "main-module": "LensesPpx"
-    },
-    {
-      "backend": "js",
-      "main-module": "Test"
-    }
-  ],
-  "refmt": 3,
-  "ocaml-dependencies": ["compiler-libs"]
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "ppx-flags": ["./ppx"],
+  "bs-dev-dependencies": ["@glennsl/bs-jest"],
+  "refmt": 3
 }
